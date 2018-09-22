@@ -18,7 +18,7 @@ loss = tf.reduce_mean(tf.square(perceptron_actual-perceptron_prediction))
 
 training_step = tf.train.GradientDescentOptimizer(20.0).minimize(loss)
 
-epochs= 10000
+epochs= 10
 
 #AND Gate
 data_1 = [0,1,0,1]
@@ -39,6 +39,6 @@ with tf.Session() as sess:
         print(w2.eval())
         print(b.eval())
     print("-----------------")
-    print(sess.run(tf.sigmoid(tf.constant(10.0))))
+    print(sess.run(tf.sigmoid(tf.constant(8.0))))
         
     
